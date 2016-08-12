@@ -1,0 +1,67 @@
+<!--
+semanticcms-view-content - SemanticCMS view of the content of the current page.
+Copyright (C) 2013, 2014, 2015, 2016  AO Industries, Inc.
+	support@aoindustries.com
+	7262 Bull Pen Cir
+	Mobile, AL 36695
+
+This file is part of semanticcms-view-content.
+
+semanticcms-view-content is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+semanticcms-view-content is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with semanticcms-view-content.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<!--
+The default content view.
+
+Arguments:
+	arg.page  The page that should be displayed.
+-->
+<article
+	xmlns:ao="http://aoindustries.com/ao-taglib"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:p="https://semanticcms.com/semanticcms-core-taglib"
+>
+	<jsp:directive.page language="java" buffer="512kb" autoFlush="true" pageEncoding="UTF-8" session="false" />
+	<jsp:output omit-xml-declaration="true" />
+	<c:set var="page" value="${arg.page}" />
+	<c:set var="pageRef" value="${page.pageRef}" />
+	<!-- Write h1 as page title -->
+	<!--<header>-->
+	<c:choose>
+		<c:when test="${pageIndex != null}">
+			<c:set var="index" value="${pageIndex.pageIndexes[pageRef]}" />
+			<h1 id="page${fn:escapeXml(index + 1)}" class="viewAllPage"><ao:out value="${index + 1}. ${page.title}" /></h1>
+		</c:when>
+		<c:otherwise>
+			<h1><ao:out value="${page.title}" /></h1>
+		</c:otherwise>
+	</c:choose>
+	<!--</header>-->
+	<!-- Write body content, putting table of contents before the first heading
+		 and substituting other headings in their original locations.
+	-->
+	<c:if test="${page.body.length > 0}">
+		<div class="pageContent">
+			<c:set scope="request" var="docsTocPage" value="${page}" />
+			<p:writeNodeBody node="${page}" />
+			<!-- When no headings in page, table of contents never called, call now -->
+			<c:if test="${empty p:getHeadings(page)}">
+				<!-- TODO: Callback to theme for table of contents, or is the table of contents part of this view? -->
+				<ao:include page="/lib/docs/toc.inc.jsp" />
+			</c:if>
+		</div>
+	</c:if>
+</article>
