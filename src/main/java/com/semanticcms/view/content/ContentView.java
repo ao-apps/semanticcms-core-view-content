@@ -79,6 +79,15 @@ public class ContentView extends View {
 		return Collections.singletonList("/styles/toc.css");
 	}
 
+	/**
+	 * TODO: Add "allowRobots" property to page, too, and exclude any views to a non-robot page.
+	 *       Also exclude from automatic site maps.
+	 */
+	@Override
+	public boolean getAllowRobots(Page page) {
+		return true;
+	}
+
 	@Override
 	public void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException, SkipPageException {
 		Dispatcher.include(
