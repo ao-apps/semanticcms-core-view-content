@@ -53,7 +53,6 @@ Arguments:
 	<!-- Write body content -->
 	<c:if test="${page.body.length > 0}">
 		<div class="pageContent">
-			<c:set scope="request" var="docsTocPage" value="${page}" />
 			<p:writeNodeBody node="${page}" />
 		</div>
 	</c:if>
