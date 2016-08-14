@@ -50,18 +50,11 @@ Arguments:
 		</c:otherwise>
 	</c:choose>
 	<!--</header>-->
-	<!-- Write body content, putting table of contents before the first heading
-		 and substituting other headings in their original locations.
-	-->
+	<!-- Write body content -->
 	<c:if test="${page.body.length > 0}">
 		<div class="pageContent">
 			<c:set scope="request" var="docsTocPage" value="${page}" />
 			<p:writeNodeBody node="${page}" />
-			<!-- When no headings in page, table of contents never called, call now -->
-			<c:if test="${empty p:getHeadings(page)}">
-				<!-- TODO: Callback to theme for table of contents, or is the table of contents part of this view? -->
-				<ao:include page="/lib/docs/toc.inc.jsp" />
-			</c:if>
 		</div>
 	</c:if>
 </article>
