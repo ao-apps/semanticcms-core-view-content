@@ -60,7 +60,12 @@ public class ContentView extends View {
 	}
 
 	@Override
-	public String getTitle(Page page) {
+	public String getTitle(
+		ServletContext servletContext,
+		HttpServletRequest request,
+		HttpServletResponse response,
+		Page page
+	) {
 		return page.getTitle() + TITLE_SEPARATOR + page.getPageRef().getBook().getTitle();
 	}
 
