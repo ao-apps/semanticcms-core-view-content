@@ -60,6 +60,11 @@ public class ContentView extends View {
 	}
 
 	@Override
+	public boolean getAppliesGlobally() {
+		return false;
+	}
+
+	@Override
 	public String getTitle(
 		ServletContext servletContext,
 		HttpServletRequest request,
