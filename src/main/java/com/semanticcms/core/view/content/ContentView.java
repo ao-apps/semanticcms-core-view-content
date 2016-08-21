@@ -1,26 +1,26 @@
 /*
- * semanticcms-view-content - SemanticCMS view of the content of the current page.
+ * semanticcms-core-view-content - SemanticCMS view of the content of the current page.
  * Copyright (C) 2016  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
  *
- * This file is part of semanticcms-view-content.
+ * This file is part of semanticcms-core-view-content.
  *
- * semanticcms-view-content is free software: you can redistribute it and/or modify
+ * semanticcms-core-view-content is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * semanticcms-view-content is distributed in the hope that it will be useful,
+ * semanticcms-core-view-content is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with semanticcms-view-content.  If not, see <http://www.gnu.org/licenses/>.
+ * along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.semanticcms.view.content;
+package com.semanticcms.core.view.content;
 
 import com.aoindustries.servlet.http.Dispatcher;
 import com.semanticcms.core.model.Page;
@@ -41,7 +41,7 @@ public class ContentView extends View {
 
 	static final String VIEW_NAME = SemanticCMS.DEFAULT_VIEW_NAME;
 
-	private static final String JSPX_TARGET = "/semanticcms-view-content/view.inc.jspx";
+	private static final String JSPX_TARGET = "/semanticcms-core-view-content/view.inc.jspx";
 
 	@Override
 	public Group getGroup() {
