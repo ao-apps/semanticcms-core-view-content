@@ -39,15 +39,6 @@ along with semanticcms-view-content.  If not, see <http://www.gnu.org/licenses /
 	<url>https://semanticcms.com/docs/semanticcms-view-content/</url>
 	<description>SemanticCMS view of the content of the current page.</description>
 
-	<developers>
-		<developer>
-			<name>AO Industries, Inc.</name>
-			<email>support@aoindustries.com</email>
-			<organization>AO Industries, Inc.</organization>
-			<organizationUrl>https://www.aoindustries.com/</organizationUrl>
-		</developer>
-	</developers>
-
 	<scm>
 		<connection>scm:git:git://github.com/aoindustries/semanticcms-view-content.git</connection>
 		<developerConnection>scm:git:git@github.com:aoindustries/semanticcms-view-content.git</developerConnection>
