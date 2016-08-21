@@ -39,13 +39,6 @@ along with semanticcms-view-content.  If not, see <http://www.gnu.org/licenses /
 	<url>https://semanticcms.com/docs/semanticcms-view-content/</url>
 	<description>SemanticCMS view of the content of the current page.</description>
 
-	<licenses>
-		<license>
-			<name>GNU General Lesser Public License (LGPL) version 3.0</name>
-			<url>https://www.gnu.org/licenses/lgpl-3.0.txt</url>
-		</license>
-	</licenses>
-
 	<developers>
 		<developer>
 			<name>AO Industries, Inc.</name>
