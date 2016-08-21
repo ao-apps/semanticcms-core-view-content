@@ -10,5 +10,5 @@ For questions or support, please contact:
     Phone: (251)607-9556
 
 The latest released version is always available:
-    Binary-only: https://www.aoindustries.com/lib/semanticcms-view-content.jar
-    With Source: https://www.aoindustries.com/src/semanticcms-view-content.src.jar
+    Binary-only: https://www.aoindustries.com/lib/semanticcms-core-view-content.jar
+    With Source: https://www.aoindustries.com/src/semanticcms-core-view-content.src.jar
