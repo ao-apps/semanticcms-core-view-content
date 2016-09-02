@@ -50,7 +50,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>4.0.0-m01-SNAPSHOT</version>
+			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- JSTL: See http://stackoverflow.com/questions/6094329/tomcat-7-and-jstl -->
