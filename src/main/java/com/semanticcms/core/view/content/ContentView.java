@@ -24,6 +24,7 @@ package com.semanticcms.core.view.content;
 
 import com.aoindustries.servlet.http.Dispatcher;
 import com.semanticcms.core.model.Page;
+import com.semanticcms.core.servlet.PageUtils;
 import com.semanticcms.core.servlet.SemanticCMS;
 import com.semanticcms.core.servlet.View;
 import java.io.IOException;
@@ -84,12 +85,13 @@ public class ContentView extends View {
 	}
 
 	/**
-	 * TODO: Add "allowRobots" property to page, too, and exclude any views to a non-robot page.
-	 *       Also exclude from automatic site maps.
+	 * Uses the page settings.
+	 * 
+	 * @see  PageUtils#findAllowRobots(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, com.semanticcms.core.model.Page)
 	 */
 	@Override
-	public boolean getAllowRobots(Page page) {
-		return true;
+	public boolean getAllowRobots(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException {
+		return PageUtils.findAllowRobots(servletContext, request, response, page);
 	}
 
 	@Override
