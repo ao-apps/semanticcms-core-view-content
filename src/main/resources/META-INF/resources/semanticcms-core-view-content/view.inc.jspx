@@ -51,7 +51,7 @@ Arguments:
 	</c:choose>
 	<!--</header>-->
 	<!-- Write body content -->
-	<c:if test="${page.body.length > 0}">
+	<c:if test="${page.body.length gt 0}">
 		<div class="pageContent">
 			<p:writeNodeBody node="${page}" />
 		</div>
