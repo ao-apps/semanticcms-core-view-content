@@ -30,9 +30,9 @@ Arguments:
 <article
 	xmlns:ao="http://aoindustries.com/ao-taglib"
 	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:core="https://semanticcms.com/core/taglib/"
 	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
 	xmlns:jsp="http://java.sun.com/JSP/Page"
-	xmlns:p="https://semanticcms.com/semanticcms-core-taglib"
 >
 	<jsp:directive.page language="java" buffer="512kb" autoFlush="true" pageEncoding="UTF-8" session="false" />
 	<jsp:output omit-xml-declaration="true" />
@@ -53,7 +53,7 @@ Arguments:
 	<!-- Write body content -->
 	<c:if test="${page.body.length gt 0}">
 		<div class="pageContent">
-			<p:writeNodeBody node="${page}" />
+			<core:writeNodeBody node="${page}" />
 		</div>
 	</c:if>
 </article>
