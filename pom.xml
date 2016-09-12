@@ -27,7 +27,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 	<parent>
 		<groupId>com.semanticcms</groupId>
 		<artifactId>semanticcms-core</artifactId>
-		<version>1.3</version>
+		<version>1.4-SNAPSHOT</version>
 	</parent>
 
 	<groupId>com.semanticcms</groupId>
@@ -36,7 +36,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 	<packaging>jar</packaging>
 
 	<name>SemanticCMS Core View Content</name>
-	<url>https://semanticcms.com/docs/semanticcms-core-view-content/</url>
+	<url>https://semanticcms.com/core/view-content/</url>
 	<description>SemanticCMS view of the content of the current page.</description>
 
 	<scm>
@@ -97,17 +97,17 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<dependency>
 			<groupId>com.semanticcms</groupId>
 			<artifactId>semanticcms-core-model</artifactId>
-			<version>1.6</version>
+			<version>1.7-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.semanticcms</groupId>
 			<artifactId>semanticcms-core-servlet</artifactId>
-			<version>1.7</version>
+			<version>1.8-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.semanticcms</groupId>
 			<artifactId>semanticcms-core-taglib</artifactId>
-			<version>1.6</version>
+			<version>1.7-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
