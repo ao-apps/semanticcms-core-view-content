@@ -53,7 +53,7 @@ Arguments:
 	<!-- Write body content -->
 	<c:if test="${page.body.length gt 0}">
 		<div class="pageContent">
-			<core:writeNodeBody node="${page}" />
+			<core:writeNodeBody node="#{page}" />
 		</div>
 	</c:if>
 </article>
