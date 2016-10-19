@@ -71,7 +71,12 @@ public class ContentView extends View {
 		HttpServletResponse response,
 		Page page
 	) {
-		return page.getTitle() + TITLE_SEPARATOR + page.getPageRef().getBook().getTitle();
+		String bookTitle = page.getPageRef().getBook().getTitle();
+		if(bookTitle != null && !bookTitle.isEmpty()) {
+			return page.getTitle() + TITLE_SEPARATOR + bookTitle;
+		} else {
+			return page.getTitle();
+		}
 	}
 
 	@Override
