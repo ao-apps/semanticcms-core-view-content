@@ -27,12 +27,17 @@ The default content view.
 Arguments:
 	arg.page  The page that should be displayed.
 -->
+<!-- TODO: Support more types of http://schema.org/CreativeWork on a per-page basis, perhaps per-element. -->
 <article
 	xmlns:ao="http://aoindustries.com/ao-taglib"
 	xmlns:c="http://java.sun.com/jsp/jstl/core"
 	xmlns:core="https://semanticcms.com/core/taglib/"
 	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:joda="http://www.joda.org/joda/time/tags"
 	xmlns:jsp="http://java.sun.com/JSP/Page"
+	class="semanticcms-core-view-content-article"
+	itemscope="itemscope"
+	itemtype="http://schema.org/Article"
 >
 	<jsp:directive.page language="java" pageEncoding="UTF-8" session="false" />
 	<jsp:output omit-xml-declaration="true" />
@@ -43,16 +48,118 @@ Arguments:
 	<ao:choose>
 		<ao:when test="#{pageIndex != null}">
 			<c:set var="index" value="${pageIndex.pageIndexes[pageRef]}" />
-			<h1 id="page${fn:escapeXml(index + 1)}" class="viewAllPage"><ao:out value="${index + 1}. ${page.title}" /></h1>
+			<h1 itemprop="headline" id="page${fn:escapeXml(index + 1)}" class="viewAllPage"><ao:out value="${index + 1}. ${page.title}" /></h1>
 		</ao:when>
 		<ao:otherwise>
-			<h1><ao:out value="${page.title}" /></h1>
+			<h1 itemprop="headline"><ao:out value="${page.title}" /></h1>
 		</ao:otherwise>
 	</ao:choose>
+	<c:if test="${page.shortTitle != page.title}">
+		<ao:meta itemprop="alternativeHeadline" content="${page.shortTitle}" />
+	</c:if>
+	<!-- TOOD: per-article copyright stuff from schema.org, instead of Dublin core -->
+	<c:if test="${!empty page.description}">
+		<ao:meta itemprop="description" content="${page.description}" />
+	</c:if>
+	<c:if test="${!empty page.keywords}">
+		<ao:meta itemprop="keywords" content="${page.keywords}" />
+	</c:if>
+	<!-- TODO: http://schema.org/url? -->
+	<!-- TODO: http://schema.org/sameAs? -->
 	<!--</header>-->
+	<!--
+		For dates, we will only show the most recent date to the user.
+		Dates not shown will be included as meta only.
+	-->
+	<c:set var="dateCreated" value="${page.dateCreated}" />
+	<c:set var="datePublished" value="${page.datePublished}" />
+	<c:set var="dateModified" value="${page.dateModified}" />
+	<c:set var="dateReviewed" value="${page.dateReviewed}" />
+	<ao:choose>
+		<!-- Show dateReviewed if it is the most recent -->
+		<ao:when test="#{
+			!empty dateReviewed
+			and (
+				empty dateModified
+				or dateReviewed.isAfter(dateModified)
+			) and (
+				empty datePublished
+				or dateReviewed.isAfter(datePublished)
+			) and (
+				empty dateCreated
+				or dateReviewed.isAfter(dateCreated)
+			)
+		}">
+			<footer>
+				<time datetime="${fn:escapeXml(dateReviewed)}"><joda:format value="${dateReviewed}" style="L-" /></time>
+				<c:if test="${!empty dateCreated}">
+					<ao:meta itemprop="dateCreated" content="${dateCreated}" />
+				</c:if>
+				<c:if test="${!empty datePublished}">
+					<ao:meta itemprop="datePublished" content="${datePublished}" />
+				</c:if>
+				<c:if test="${!empty dateModified}">
+					<ao:meta itemprop="dateModified" content="${dateModified}" />
+				</c:if>
+			</footer>
+		</ao:when>
+		<!-- Show dateModified if it is the most recent -->
+		<ao:when test="#{
+			!empty dateModified
+			and (
+				empty datePublished
+				or dateModified.isAfter(datePublished)
+			) and (
+				empty dateCreated
+				or dateModified.isAfter(dateCreated)
+			)
+		}">
+			<footer>
+				<time itemprop="dateModified" datetime="${fn:escapeXml(dateModified)}"><joda:format value="${dateModified}" style="L-" /></time>
+				<c:if test="${!empty dateCreated}">
+					<ao:meta itemprop="dateCreated" content="${dateCreated}" />
+				</c:if>
+				<c:if test="${!empty datePublished}">
+					<ao:meta itemprop="datePublished" content="${datePublished}" />
+				</c:if>
+			</footer>
+		</ao:when>
+		<!-- Show datePublished if it is the most recent -->
+		<ao:when test="#{
+			!empty datePublished
+			and (
+				empty dateCreated
+				or datePublished.isAfter(dateCreated)
+			)
+		}">
+			<footer>
+				<time itemprop="datePublished" datetime="${fn:escapeXml(datePublished)}"><joda:format value="${datePublished}" style="L-" /></time>
+				<c:if test="${!empty dateCreated}">
+					<ao:meta itemprop="dateCreated" content="${dateCreated}" />
+				</c:if>
+				<c:if test="${!empty dateModified}">
+					<ao:meta itemprop="dateModified" content="${dateModified}" />
+				</c:if>
+			</footer>
+		</ao:when>
+		<!-- Show dateCreated if it is the most recent -->
+		<ao:when test="#{
+			!empty dateCreated
+		}">
+			<footer>
+				<time itemprop="dateCreated" datetime="${fn:escapeXml(dateCreated)}"><joda:format value="${dateCreated}" style="L-" /></time>
+				<c:if test="${!empty datePublished}">
+					<ao:meta itemprop="datePublished" content="${datePublished}" />
+				</c:if>
+				<c:if test="${!empty dateModified}">
+					<ao:meta itemprop="dateModified" content="${dateModified}" />
+				</c:if>
+			</footer>
+		</ao:when>
+	</ao:choose>
 	<!-- Write body content -->
 	<c:if test="${page.body.length gt 0}">
-		<div class="pageContent">
+		<div itemprop="articleBody" class="pageContent semanticcms-core-view-content-body">
 			<core:writeNodeBody node="#{page}" />
 		</div>
 	</c:if>
