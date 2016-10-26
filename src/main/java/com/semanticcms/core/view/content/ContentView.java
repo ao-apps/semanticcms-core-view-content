@@ -23,6 +23,7 @@
 package com.semanticcms.core.view.content;
 
 import com.aoindustries.servlet.http.Dispatcher;
+import com.aoindustries.util.AoArrays;
 import com.semanticcms.core.model.Page;
 import com.semanticcms.core.servlet.PageUtils;
 import com.semanticcms.core.servlet.SemanticCMS;
@@ -34,6 +35,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.SkipPageException;
+import org.joda.time.ReadableInstant;
 
 /**
  * The default content view.
@@ -62,6 +64,29 @@ public class ContentView extends View {
 	@Override
 	public boolean getAppliesGlobally() {
 		return false;
+	}
+
+	/**
+	 * The last modified time of a page is the most recent of:
+	 * <ol>
+	 *   <li>{@link Page#getDateCreated()}</li>
+	 *   <li>{@link Page#getDatePublished()}</li>
+	 *   <li>{@link Page#getDateModified()}</li>
+	 * </ol>
+	 * Note: {@link Page#getDateReviewed()} is left out because a change in its value alone does not indicate a change in content.
+	 */
+	@Override
+	public ReadableInstant getLastModified(
+		ServletContext servletContext,
+		HttpServletRequest request,
+		HttpServletResponse response,
+		Page page
+	) throws ServletException, IOException {
+		return AoArrays.maxNonNull(
+			page.getDateCreated(),
+			page.getDatePublished(),
+			page.getDateModified()
+		);
 	}
 
 	@Override
