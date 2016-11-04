@@ -68,8 +68,8 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 									<link>https://docs.oracle.com/javaee/6/api/</link>
 									<link>http://www.joda.org/joda-time/apidocs/</link>
 									<link>http://www.joda.org/joda-time-jsptags/apidocs/</link>
-									<link>https://www.aoindustries.com/ao-taglib/apidocs/</link>
-									<link>https://www.aoindustries.com/aocode-public/apidocs/</link>
+									<link>https://aoindustries.com/ao-taglib/apidocs/</link>
+									<link>https://aoindustries.com/aocode-public/apidocs/</link>
 									<link>https://semanticcms.com/core/model/apidocs/</link>
 									<link>https://semanticcms.com/core/servlet/apidocs/</link>
 									<link>https://semanticcms.com/core/taglib/apidocs/</link>
