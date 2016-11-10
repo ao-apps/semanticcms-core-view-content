@@ -36,13 +36,12 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 	<packaging>jar</packaging>
 
 	<properties>
-		<bookPath>/core/view-content</bookPath>
 		<shortTitle>View Content</shortTitle>
 		<description.html><![CDATA[<a target="_top" href="https://semanticcms.com/">SemanticCMS</a> view of the content of the current page.]]></description.html>
 	</properties>
 
 	<name>SemanticCMS Core View Content</name>
-	<url>https://semanticcms.com${bookPath}/</url><!-- Can't inherit due to multi-module -->
+	<url>https://semanticcms.com/core/view-content/</url>
 	<description>SemanticCMS view of the content of the current page.</description>
 	<inceptionYear>2013</inceptionYear>
 
