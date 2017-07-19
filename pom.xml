@@ -27,7 +27,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 	<parent>
 		<groupId>com.semanticcms</groupId>
 		<artifactId>semanticcms-parent</artifactId>
-		<version>1.0.1-SNAPSHOT</version>
+		<version>1.0.1</version>
 		<relativePath>../../parent/pom.xml</relativePath>
 	</parent>
 
