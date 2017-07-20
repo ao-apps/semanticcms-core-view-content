@@ -162,7 +162,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<dependency>
 			<groupId>com.semanticcms</groupId>
 			<artifactId>semanticcms-core-taglib</artifactId>
-			<version>1.8.2-SNAPSHOT</version>
+			<version>1.9.0</version>
 		</dependency>
 	</dependencies>
 </project>
