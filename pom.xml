@@ -152,7 +152,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<dependency>
 			<groupId>com.semanticcms</groupId>
 			<artifactId>semanticcms-core-model</artifactId>
-			<version>1.8.2-SNAPSHOT</version>
+			<version>1.8.2</version>
 		</dependency>
 		<dependency>
 			<groupId>com.semanticcms</groupId>
