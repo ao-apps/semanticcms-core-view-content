@@ -33,7 +33,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 
 	<groupId>com.semanticcms</groupId>
 	<artifactId>semanticcms-core-view-content</artifactId>
-	<version>1.4.3-SNAPSHOT</version>
+	<version>1.4.3</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -54,7 +54,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<connection>scm:git:git://github.com/aoindustries/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:git@github.com:aoindustries/${project.artifactId}.git</developerConnection>
 		<url>https://github.com/aoindustries/${project.artifactId}</url>
-		<tag>HEAD</tag>
+		<tag>semanticcms-core-view-content-1.4.3</tag>
 	</scm>
 
 	<profiles>
