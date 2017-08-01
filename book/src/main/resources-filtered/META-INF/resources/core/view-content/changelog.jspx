@@ -37,7 +37,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-30T21:15:31-0500"
-		dateModified="2017-07-20T12:00:05-0500"
+		dateModified="2017-08-01T16:59:52-0500"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.semanticcms:semanticcms-core-view-content:pom.version}" />
@@ -52,7 +52,11 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 				groupId="@{documented.groupId}"
 				artifactId="@{documented.artifactId}"
 				scmUrl="@{documented.scm.url}"
-			/>
+			>
+				<ul>
+					<li>Updated for <core:link book="/" page="/index.jspx" /> 2 compatibility.</li>
+				</ul>
+			</changlog:release>
 		</c:if>
 
 		<changelog:release

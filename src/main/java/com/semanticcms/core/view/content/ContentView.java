@@ -1,6 +1,6 @@
 /*
  * semanticcms-core-view-content - SemanticCMS view of the content of the current page.
- * Copyright (C) 2016  AO Industries, Inc.
+ * Copyright (C) 2016, 2017  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -96,7 +96,7 @@ public class ContentView extends View {
 		HttpServletResponse response,
 		Page page
 	) {
-		String bookTitle = page.getPageRef().getBook().getTitle();
+		String bookTitle = SemanticCMS.getInstance(servletContext).getBook(page.getPageRef().getBookRef()).getTitle();
 		if(bookTitle != null && !bookTitle.isEmpty()) {
 			return page.getTitle() + TITLE_SEPARATOR + bookTitle;
 		} else {
