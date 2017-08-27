@@ -24,10 +24,11 @@ package com.semanticcms.core.view.content;
 
 import com.aoindustries.servlet.http.Dispatcher;
 import com.aoindustries.util.AoArrays;
+import com.semanticcms.core.controller.PageUtils;
+import com.semanticcms.core.controller.SemanticCMS;
+import com.semanticcms.core.model.Link;
 import com.semanticcms.core.model.Page;
-import com.semanticcms.core.servlet.PageUtils;
-import com.semanticcms.core.servlet.SemanticCMS;
-import com.semanticcms.core.servlet.View;
+import com.semanticcms.core.renderer.html.View;
 import java.io.IOException;
 import java.util.Collections;
 import javax.servlet.ServletContext;
@@ -42,7 +43,7 @@ import org.joda.time.ReadableInstant;
  */
 public class ContentView extends View {
 
-	static final String VIEW_NAME = SemanticCMS.DEFAULT_VIEW_NAME;
+	static final String VIEW_NAME = Link.DEFAULT_VIEW_NAME;
 
 	private static final String JSPX_TARGET = "/semanticcms-core-view-content/view.inc.jspx";
 
