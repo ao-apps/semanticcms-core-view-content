@@ -37,7 +37,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-30T21:15:31-0500"
-		dateModified="2019-04-13T13:27:21-0500"
+		dateModified="2019-04-13T14:15:50-0500"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.semanticcms:semanticcms-core-view-content:pom.version}" />
@@ -55,7 +55,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 			>
 				<ul>
 					<li>
-						Explicitly passing <ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}/javax/servlet/ServletRequest.html#getLocale()">\${pageContext.request.locale}</ao:a>
+						Explicitly passing \${<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}/javax/servlet/jsp/PageContext.html">pageContext</ao:a>.<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}/javax/servlet/jsp/PageContext.html#getRequest()">request</ao:a>.<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}/javax/servlet/ServletRequest.html#getLocale()">locale</ao:a>}
 						to <ao:a href="https://www.joda.org/joda-time-jsptags/userguide.html">Joda Time - JSP tags</ao:a> to workaround dates
 						displayed in the incorrect locale.
 					</li>
