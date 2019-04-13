@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 semanticcms-core-view-content - SemanticCMS view of the content of the current page.
-Copyright (C) 2013, 2014, 2015, 2016  AO Industries, Inc.
+Copyright (C) 2013, 2014, 2015, 2016, 2019  AO Industries, Inc.
 	support@aoindustries.com
 	7262 Bull Pen Cir
 	Mobile, AL 36695
@@ -92,7 +92,7 @@ Arguments:
 			)
 		}">
 			<footer>
-				<time datetime="${fn:escapeXml(dateReviewed)}"><joda:format value="${dateReviewed}" style="L-" /></time>
+				<time datetime="${fn:escapeXml(dateReviewed)}"><joda:format locale="${pageContext.request.locale}" value="${dateReviewed}" style="L-" /></time>
 				<c:if test="${!empty dateCreated}">
 					<ao:meta itemprop="dateCreated" content="${dateCreated}" />
 				</c:if>
@@ -116,7 +116,7 @@ Arguments:
 			)
 		}">
 			<footer>
-				<time itemprop="dateModified" datetime="${fn:escapeXml(dateModified)}"><joda:format value="${dateModified}" style="L-" /></time>
+				<time itemprop="dateModified" datetime="${fn:escapeXml(dateModified)}"><joda:format locale="${pageContext.request.locale}" value="${dateModified}" style="L-" /></time>
 				<c:if test="${!empty dateCreated}">
 					<ao:meta itemprop="dateCreated" content="${dateCreated}" />
 				</c:if>
@@ -134,7 +134,7 @@ Arguments:
 			)
 		}">
 			<footer>
-				<time itemprop="datePublished" datetime="${fn:escapeXml(datePublished)}"><joda:format value="${datePublished}" style="L-" /></time>
+				<time itemprop="datePublished" datetime="${fn:escapeXml(datePublished)}"><joda:format locale="${pageContext.request.locale}" value="${datePublished}" style="L-" /></time>
 				<c:if test="${!empty dateCreated}">
 					<ao:meta itemprop="dateCreated" content="${dateCreated}" />
 				</c:if>
@@ -148,7 +148,7 @@ Arguments:
 			!empty dateCreated
 		}">
 			<footer>
-				<time itemprop="dateCreated" datetime="${fn:escapeXml(dateCreated)}"><joda:format value="${dateCreated}" style="L-" /></time>
+				<time itemprop="dateCreated" datetime="${fn:escapeXml(dateCreated)}"><joda:format locale="${pageContext.request.locale}" value="${dateCreated}" style="L-" /></time>
 				<c:if test="${!empty datePublished}">
 					<ao:meta itemprop="datePublished" content="${datePublished}" />
 				</c:if>

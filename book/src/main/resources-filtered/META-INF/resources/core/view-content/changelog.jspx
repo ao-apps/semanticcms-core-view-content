@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 semanticcms-core-view-content - SemanticCMS view of the content of the current page.
-Copyright (C) 2016, 2017  AO Industries, Inc.
+Copyright (C) 2016, 2017, 2019  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -37,7 +37,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-30T21:15:31-0500"
-		dateModified="2017-07-20T12:00:05-0500"
+		dateModified="2019-04-13T13:27:21-0500"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.semanticcms:semanticcms-core-view-content:pom.version}" />
@@ -52,7 +52,15 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 				groupId="@{documented.groupId}"
 				artifactId="@{documented.artifactId}"
 				scmUrl="@{documented.scm.url}"
-			/>
+			>
+				<ul>
+					<li>
+						Explicitly passing <ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}/javax/servlet/ServletRequest.html#getLocale()">\${pageContext.request.locale}</ao:a>
+						to <ao:a href="https://www.joda.org/joda-time-jsptags/userguide.html">Joda Time - JSP tags</ao:a> to workaround dates
+						displayed in the incorrect locale.
+					</li>
+				</ul>
+			</changelog:release>
 		</c:if>
 
 		<changelog:release
