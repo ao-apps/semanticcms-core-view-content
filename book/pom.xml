@@ -37,7 +37,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<documented.groupId>com.semanticcms</documented.groupId><documented.artifactId>semanticcms-core-view-content</documented.artifactId>
 		<documented.javaVersion>1.7</documented.javaVersion>
 		<documented.javac.link.javaApi>${javac.link.javaApi.jdk7}</documented.javac.link.javaApi>
-		<documented.name>SemanticCMS 1 Core View Content</documented.name>
+		<documented.name>SemanticCMS Core View Content</documented.name>
 		<documented.shortTitle>View Content</documented.shortTitle>
 		<documented.url>https://semanticcms.com/core/view-content/</documented.url>
 		<documented.description>SemanticCMS view of the content of the current page.</documented.description>
