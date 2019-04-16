@@ -56,7 +56,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 				<ul>
 					<li>Updated for <core:link book="/" page="/" /> 2 compatibility.</li>
 					<li>
-						Explicitly passing \${<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}/javax/servlet/jsp/PageContext.html">pageContext</ao:a>.<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}/javax/servlet/jsp/PageContext.html#getRequest()">request</ao:a>.<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}/javax/servlet/ServletRequest.html#getLocale()">locale</ao:a>}
+						Explicitly passing \${<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}javax/servlet/jsp/PageContext.html">pageContext</ao:a>.<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}javax/servlet/jsp/PageContext.html#getRequest()">request</ao:a>.<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}javax/servlet/ServletRequest.html#getLocale()">locale</ao:a>}
 						to <ao:a href="https://www.joda.org/joda-time-jsptags/userguide.html">Joda Time - JSP tags</ao:a> to workaround dates
 						displayed in the incorrect locale.
 					</li>
