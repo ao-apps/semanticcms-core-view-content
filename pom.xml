@@ -32,7 +32,7 @@ along with semanticcms-view-content.  If not, see <http://www.gnu.org/licenses /
 
 	<groupId>com.semanticcms</groupId>
 	<artifactId>semanticcms-view-content</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.1</version>
 
 	<packaging>pom</packaging>
 
@@ -44,7 +44,7 @@ along with semanticcms-view-content.  If not, see <http://www.gnu.org/licenses /
 		<connection>scm:git:git://github.com/aoindustries/semanticcms-view-content.git</connection>
 		<developerConnection>scm:git:git@github.com:aoindustries/semanticcms-view-content.git</developerConnection>
 		<url>http://github.com/aoindustries/semanticcms-view-content</url>
-		<tag>HEAD</tag>
+		<tag>semanticcms-view-content-1.1</tag>
 	</scm>
 
 	<distributionManagement>
