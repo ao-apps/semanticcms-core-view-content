@@ -37,7 +37,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-30T21:15:31-0500"
-		dateModified="2019-04-13T14:15:50-0500"
+		dateModified="2019-04-20T19:16:58-0500"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.semanticcms:semanticcms-core-view-content:pom.version}" />
@@ -55,6 +55,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 			>
 				<ul>
 					<li>Updated for <core:link book="/" page="/" /> 2 compatibility.</li>
+					<li>Minimum Java version changed from 1.6 to 1.7.</li>
 					<li>
 						Explicitly passing \${<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}javax/servlet/jsp/PageContext.html">pageContext</ao:a>.<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}javax/servlet/jsp/PageContext.html#getRequest()">request</ao:a>.<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}javax/servlet/ServletRequest.html#getLocale()">locale</ao:a>}
 						to <ao:a href="https://www.joda.org/joda-time-jsptags/userguide.html">Joda Time - JSP tags</ao:a> to workaround dates
