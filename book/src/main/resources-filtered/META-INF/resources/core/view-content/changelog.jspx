@@ -37,7 +37,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-30T21:15:31-0500"
-		dateModified="2019-06-04T14:23:25-0500"
+		dateModified="2019-06-17T02:48:05-0500"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.semanticcms:semanticcms-core-view-content:pom.version}" />
@@ -60,6 +60,10 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 							<li>This project uses transitive managed dependencies.</li>
 							<li>This project's managed dependencies may also be imported by other projects.</li>
 						</ol>
+					</li>
+					<li>
+						<code>view.inc.jspx</code> now supports an optional <code>h1Class</code> argument,
+						which provides the CSS class to use for the title h1.
 					</li>
 				</ul>
 			</changelog:release>
