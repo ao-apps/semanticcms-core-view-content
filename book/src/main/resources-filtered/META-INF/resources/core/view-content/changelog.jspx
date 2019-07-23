@@ -36,7 +36,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-30T21:15:31-0500"
-		dateModified="2019-06-19T09:48:11-0500"
+		dateModified="2019-07-23T17:34:55-0500"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.semanticcms:semanticcms-core-view-content:pom.version}" />
@@ -54,19 +54,32 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 			>
 				<ul>
 					<li>Updated for <core:link book="/" page="/" /> 2 compatibility.</li>
-					<li>Using managed dependencies:
-						<ol>
-							<li>This project uses managed dependencies.</li>
-							<li>This project's managed dependencies may also be imported by other projects.</li>
-						</ol>
-					</li>
-					<li>
-						<code>view.inc.jspx</code> now supports an optional <code>h1Class</code> argument,
-						which provides the CSS class to use for the title h1.
-					</li>
+					<li>Using response locale instead of request locale in date/time formatting.</li>
 				</ul>
 			</changelog:release>
 		</c:if>
+
+		<changelog:release
+			projectName="@{documented.name}"
+			version="1.6.0"
+			datePublished="2019-06-22T02:11:25-0500"
+			groupId="@{documented.groupId}"
+			artifactId="@{documented.artifactId}"
+			scmUrl="@{documented.scm.url}"
+		>
+			<ul>
+				<li>Using managed dependencies:
+					<ol>
+						<li>This project uses managed dependencies.</li>
+						<li>This project's managed dependencies may also be imported by other projects.</li>
+					</ol>
+				</li>
+				<li>
+					<code>view.inc.jspx</code> now supports an optional <code>h1Class</code> argument,
+					which provides the CSS class to use for the title h1.
+				</li>
+			</ul>
+		</changelog:release>
 
 		<changelog:release
 			projectName="@{documented.name}"

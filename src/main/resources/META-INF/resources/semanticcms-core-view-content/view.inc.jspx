@@ -103,7 +103,7 @@ Arguments:
 			)
 		}">
 			<footer>
-				<time datetime="${fn:escapeXml(dateReviewed)}"><joda:format locale="${pageContext.request.locale}" value="${dateReviewed}" style="L-" /></time>
+				<time datetime="${fn:escapeXml(dateReviewed)}"><joda:format locale="${pageContext.response.locale}" value="${dateReviewed}" style="L-" /></time>
 				<c:if test="${!empty dateCreated}">
 					<ao:meta itemprop="dateCreated" content="${dateCreated}" />
 				</c:if>
@@ -127,7 +127,7 @@ Arguments:
 			)
 		}">
 			<footer>
-				<time itemprop="dateModified" datetime="${fn:escapeXml(dateModified)}"><joda:format locale="${pageContext.request.locale}" value="${dateModified}" style="L-" /></time>
+				<time itemprop="dateModified" datetime="${fn:escapeXml(dateModified)}"><joda:format locale="${pageContext.response.locale}" value="${dateModified}" style="L-" /></time>
 				<c:if test="${!empty dateCreated}">
 					<ao:meta itemprop="dateCreated" content="${dateCreated}" />
 				</c:if>
@@ -145,7 +145,7 @@ Arguments:
 			)
 		}">
 			<footer>
-				<time itemprop="datePublished" datetime="${fn:escapeXml(datePublished)}"><joda:format locale="${pageContext.request.locale}" value="${datePublished}" style="L-" /></time>
+				<time itemprop="datePublished" datetime="${fn:escapeXml(datePublished)}"><joda:format locale="${pageContext.response.locale}" value="${datePublished}" style="L-" /></time>
 				<c:if test="${!empty dateCreated}">
 					<ao:meta itemprop="dateCreated" content="${dateCreated}" />
 				</c:if>
@@ -159,7 +159,7 @@ Arguments:
 			!empty dateCreated
 		}">
 			<footer>
-				<time itemprop="dateCreated" datetime="${fn:escapeXml(dateCreated)}"><joda:format locale="${pageContext.request.locale}" value="${dateCreated}" style="L-" /></time>
+				<time itemprop="dateCreated" datetime="${fn:escapeXml(dateCreated)}"><joda:format locale="${pageContext.response.locale}" value="${dateCreated}" style="L-" /></time>
 				<c:if test="${!empty datePublished}">
 					<ao:meta itemprop="datePublished" content="${datePublished}" />
 				</c:if>
