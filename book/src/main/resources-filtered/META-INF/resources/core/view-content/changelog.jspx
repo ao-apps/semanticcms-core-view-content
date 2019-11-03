@@ -36,7 +36,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-30T21:15:31-0500"
-		dateModified="2019-10-11T22:51:23-0500"
+		dateModified="2019-11-02T16:41:06-0500"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.semanticcms:semanticcms-core-view-content:pom.version}" />
@@ -54,6 +54,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 			>
 				<ul>
 					<li>Updated for <core:link book="/" page="/" /> 2 compatibility.</li>
+					<li>Minimum Java version changed from 1.7 to 1.8.</li>
 				</ul>
 			</changelog:release>
 		</c:if>
