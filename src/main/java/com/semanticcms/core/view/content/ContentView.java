@@ -1,6 +1,6 @@
 /*
  * semanticcms-core-view-content - SemanticCMS view of the content of the current page.
- * Copyright (C) 2016, 2017  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2020  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -22,6 +22,7 @@
  */
 package com.semanticcms.core.view.content;
 
+import com.aoindustries.html.Html;
 import com.aoindustries.servlet.http.Dispatcher;
 import com.aoindustries.util.AoArrays;
 import com.semanticcms.core.model.Page;
@@ -125,7 +126,7 @@ public class ContentView extends View {
 	}
 
 	@Override
-	public void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException, SkipPageException {
+	public void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Html html, Page page) throws ServletException, IOException, SkipPageException {
 		Dispatcher.include(
 			servletContext,
 			JSPX_TARGET,
