@@ -32,7 +32,10 @@ import com.semanticcms.core.servlet.View;
 import java.io.IOException;
 import java.util.Collections;
 import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.SkipPageException;
@@ -43,9 +46,26 @@ import org.joda.time.ReadableInstant;
  */
 public class ContentView extends View {
 
-	static final String VIEW_NAME = SemanticCMS.DEFAULT_VIEW_NAME;
+	/**
+	 * @see  Link#DEFAULT_VIEW_NAME
+	 */
+	public static final String NAME = SemanticCMS.DEFAULT_VIEW_NAME;
 
 	private static final String JSPX_TARGET = "/semanticcms-core-view-content/view.inc.jspx";
+
+	@WebListener("Registers the \"" + NAME + "\" view in SemanticCMS.")
+	public static class Initializer implements ServletContextListener {
+		@Override
+		public void contextInitialized(ServletContextEvent event) {
+			SemanticCMS.getInstance(event.getServletContext()).addView(new ContentView());
+		}
+		@Override
+		public void contextDestroyed(ServletContextEvent event) {
+			// Do nothing
+		}
+	}
+
+	private ContentView() {}
 
 	@Override
 	public Group getGroup() {
@@ -59,7 +79,7 @@ public class ContentView extends View {
 
 	@Override
 	public String getName() {
-		return VIEW_NAME;
+		return NAME;
 	}
 
 	@Override
