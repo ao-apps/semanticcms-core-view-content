@@ -172,7 +172,7 @@ Arguments:
 	</ao:choose>
 	<!-- Write body content -->
 	<c:if test="${page.body.length gt 0}">
-		<div itemprop="articleBody" class="pageContent semanticcms-core-view-content-body">
+		<div itemprop="articleBody" class="semanticcms-core-view-content-body">
 			<core:writeNodeBody node="#{page}" />
 		</div>
 	</c:if>
