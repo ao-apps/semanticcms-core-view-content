@@ -25,9 +25,11 @@ package com.semanticcms.core.view.content;
 import com.aoindustries.html.Html;
 import com.aoindustries.servlet.http.Dispatcher;
 import com.aoindustries.util.AoArrays;
+import com.aoindustries.web.resources.registry.Registry;
 import com.semanticcms.core.model.Page;
 import com.semanticcms.core.servlet.PageUtils;
 import com.semanticcms.core.servlet.SemanticCMS;
+import com.semanticcms.core.servlet.Theme;
 import com.semanticcms.core.servlet.View;
 import java.io.IOException;
 import java.util.Collections;
@@ -47,7 +49,7 @@ import org.joda.time.ReadableInstant;
 public class ContentView extends View {
 
 	/**
-	 * @see  Link#DEFAULT_VIEW_NAME
+	 * @see  SemanticCMS#DEFAULT_VIEW_NAME
 	 */
 	public static final String NAME = SemanticCMS.DEFAULT_VIEW_NAME;
 
@@ -143,6 +145,12 @@ public class ContentView extends View {
 	@Override
 	public boolean getAllowRobots(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException {
 		return PageUtils.findAllowRobots(servletContext, request, response, page);
+	}
+
+	@Override
+	public void configureResources(ServletContext servletContext, HttpServletRequest req, HttpServletResponse resp, Theme theme, Page page, Registry requestRegistry) {
+		super.configureResources(servletContext, req, resp, theme, page, requestRegistry);
+		// TODO: Add and activate the page-scope registry from the page that will be written
 	}
 
 	@Override
