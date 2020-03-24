@@ -22,9 +22,9 @@
  */
 package com.semanticcms.core.view.content;
 
+import com.aoindustries.collections.AoArrays;
 import com.aoindustries.html.Html;
 import com.aoindustries.servlet.http.Dispatcher;
-import com.aoindustries.util.AoArrays;
 import com.aoindustries.web.resources.registry.Registry;
 import com.semanticcms.core.controller.PageUtils;
 import com.semanticcms.core.controller.SemanticCMS;

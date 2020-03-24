@@ -66,6 +66,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 								<!-- Java EE -->
 								<link>${javadoc.link.javaee}</link>
 								<!-- Direct -->
+								<link>https://aoindustries.com/ao-collections/apidocs/</link>
 								<link>https://aoindustries.com/ao-fluent-html/apidocs/</link>
 								<link>https://aoindustries.com/ao-lang/apidocs/</link>
 								<link>https://aoindustries.com/ao-servlet-util/apidocs/</link>
@@ -94,6 +95,9 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 				<scope>import</scope>
 			</dependency>
 			<!-- Direct -->
+			<dependency>
+				<groupId>com.aoindustries</groupId><artifactId>ao-collections</artifactId><version>1.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+			</dependency>
 			<dependency>
 				<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html</artifactId><version>0.1.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
@@ -147,6 +151,9 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 			<groupId>org.glassfish.web</groupId><artifactId>jstl-impl</artifactId>
 		</dependency>
 		<!-- Direct -->
+		<dependency>
+			<groupId>com.aoindustries</groupId><artifactId>ao-collections</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html</artifactId>
 		</dependency>
