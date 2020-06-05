@@ -90,6 +90,8 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 											<classifier>javadoc</classifier><includes>element-list, package-list</includes>
 											<outputDirectory>${project.build.directory}/offlineLinks/com.aoindustries/ao-web-resources-registry</outputDirectory>
 										</artifactItem>
+										<!-- ao-javadoc-offline: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId> -->
+										<!-- ao-javadoc-offline: <groupId>javax.servlet.jsp</groupId><artifactId>javax.servlet.jsp-api</artifactId> -->
 										<artifactItem>
 											<groupId>joda-time</groupId><artifactId>joda-time</artifactId>
 											<classifier>javadoc</classifier><includes>element-list, package-list</includes>
@@ -114,15 +116,6 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-javadoc-plugin</artifactId>
 						<configuration>
 							<offlineLinks>
-								<offlineLink>
-									<url>${javadoc.link.javase}</url>
-									<location>${project.build.directory}/offlineLinks/com/aoindustries/javadoc/offline/javase/${javase.release}</location>
-								</offlineLink>
-								<!-- Java EE -->
-								<offlineLink>
-									<url>${javadoc.link.javaee}</url>
-									<location>${project.build.directory}/offlineLinks/com/aoindustries/javadoc/offline/javaee/${javaee.version}</location>
-								</offlineLink>
 								<!-- Direct -->
 								<offlineLink>
 									<url>https://aoindustries.com/ao-collections/apidocs/</url>
@@ -140,6 +133,8 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 									<url>https://aoindustries.com/ao-web-resources/registry/apidocs/</url>
 									<location>${project.build.directory}/offlineLinks/com.aoindustries/ao-web-resources-registry</location>
 								</offlineLink>
+								<!-- Java EE: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId> -->
+								<!-- Java EE: <groupId>javax.servlet.jsp</groupId><artifactId>javax.servlet.jsp-api</artifactId> -->
 								<offlineLink>
 									<url>https://www.joda.org/joda-time/apidocs/</url>
 									<location>${project.build.directory}/offlineLinks/joda-time/joda-time</location>
@@ -152,6 +147,16 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 									<url>https://semanticcms.com/core/servlet/apidocs/</url>
 									<location>${project.build.directory}/offlineLinks/com.semanticcms/semanticcms-core-servlet</location>
 								</offlineLink>
+								<!-- Java SE -->
+								<offlineLink>
+									<url>${javadoc.link.javase}</url>
+									<location>${project.build.directory}/offlineLinks/com/aoindustries/javadoc/offline/javase/${javase.release}</location>
+								</offlineLink>
+								<!-- Java EE -->
+								<offlineLink>
+									<url>${javadoc.link.javaee}</url>
+									<location>${project.build.directory}/offlineLinks/com/aoindustries/javadoc/offline/javaee/${javaee.version}</location>
+								</offlineLink>
 							</offlineLinks>
 						</configuration>
 					</plugin>
@@ -162,12 +167,6 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- Java EE -->
-			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>javaee-web-api-bom</artifactId><version>6.0.1${POST-SNAPSHOT}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
 			<!-- Direct -->
 			<dependency>
 				<groupId>com.aoindustries</groupId><artifactId>ao-collections</artifactId><version>1.1.0${POST-SNAPSHOT}</version>
@@ -181,6 +180,8 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 			<dependency>
 				<groupId>com.aoindustries</groupId><artifactId>ao-web-resources-registry</artifactId><version>0.1.0${POST-SNAPSHOT}</version>
 			</dependency>
+			<!-- javaee-web-api-bom: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId> -->
+			<!-- javaee-web-api-bom: <groupId>javax.servlet.jsp</groupId><artifactId>javax.servlet.jsp-api</artifactId> -->
 			<dependency>
 				<groupId>joda-time</groupId><artifactId>joda-time</artifactId><version>2.10.6</version>
 			</dependency>
@@ -197,22 +198,21 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 			<dependency>
 				<groupId>joda-time</groupId><artifactId>joda-time-jsptags</artifactId><version>1.1.1</version>
 			</dependency>
+			<!-- javaee-web-api-bom: <groupId>javax.servlet</groupId><artifactId>jstl</artifactId> -->
+			<!-- javaee-web-api-bom: <groupId>org.glassfish.web</groupId><artifactId>jstl-impl</artifactId> -->
 			<dependency>
 				<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-taglib</artifactId><version>1.12.0${POST-SNAPSHOT}</version>
+			</dependency>
+			<!-- BOM -->
+			<dependency>
+				<groupId>com.aoindustries</groupId><artifactId>javaee-web-api-bom</artifactId><version>6.0.1${POST-SNAPSHOT}</version>
+				<type>pom</type>
+				<scope>import</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- Java EE -->
-		<dependency>
-			<groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet.jsp</groupId><artifactId>javax.servlet.jsp-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
 		<!-- Direct -->
 		<dependency>
 			<groupId>com.aoindustries</groupId><artifactId>ao-collections</artifactId>
@@ -225,6 +225,12 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		</dependency>
 		<dependency>
 			<groupId>com.aoindustries</groupId><artifactId>ao-web-resources-registry</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId><artifactId>javax.servlet.jsp-api</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>joda-time</groupId><artifactId>joda-time</artifactId>
