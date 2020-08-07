@@ -25,7 +25,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.semanticcms</groupId><artifactId>semanticcms-parent</artifactId><version>1.9.0-POST-SNAPSHOT</version>
+		<groupId>com.semanticcms</groupId><artifactId>semanticcms-parent</artifactId><version>1.10.0-SNAPSHOT</version>
 		<relativePath>../../parent/pom.xml</relativePath>
 	</parent>
 
@@ -57,6 +57,25 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<url>https://github.com/aoindustries/semanticcms-core-view-content/issues</url>
 	</issueManagement>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId><artifactId>maven-dependency-plugin</artifactId>
+				<configuration>
+					<usedDependencies>
+						<!-- JSP Only -->
+						<dependency>com.aoindustries:ao-taglib</dependency>
+						<dependency>joda-time:joda-time-jsptags</dependency>
+						<dependency>javax.servlet:jstl</dependency>
+						<dependency>com.semanticcms:semanticcms-core-taglib</dependency>
+						<!-- Runtime Direct -->
+						<dependency>org.glassfish.web:jstl-impl</dependency>
+					</usedDependencies>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<profiles>
 		<profile>
 			<id>offlineLinks</id><activation><file><exists>src/main/java</exists></file></activation>
@@ -85,6 +104,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 											<classifier>javadoc</classifier><includes>element-list, package-list</includes>
 											<outputDirectory>${project.build.directory}/offlineLinks/com.aoindustries/ao-servlet-util</outputDirectory>
 										</artifactItem>
+										<!-- JSP Only: <groupId>com.aoindustries</groupId><artifactId>ao-taglib</artifactId> -->
 										<artifactItem>
 											<groupId>com.aoindustries</groupId><artifactId>ao-web-resources-registry</artifactId>
 											<classifier>javadoc</classifier><includes>element-list, package-list</includes>
@@ -97,6 +117,8 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 											<classifier>javadoc</classifier><includes>element-list, package-list</includes>
 											<outputDirectory>${project.build.directory}/offlineLinks/joda-time/joda-time</outputDirectory>
 										</artifactItem>
+										<!-- JSP Only: <groupId>joda-time</groupId><artifactId>joda-time-jsptags</artifactId> -->
+										<!-- JSP Only: <groupId>javax.servlet</groupId><artifactId>jstl</artifactId> -->
 										<artifactItem>
 											<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId>
 											<classifier>javadoc</classifier><includes>element-list, package-list</includes>
@@ -107,6 +129,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 											<classifier>javadoc</classifier><includes>element-list, package-list</includes>
 											<outputDirectory>${project.build.directory}/offlineLinks/com.semanticcms/semanticcms-core-servlet</outputDirectory>
 										</artifactItem>
+										<!-- JSP Only: <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-taglib</artifactId> -->
 									</artifactItems>
 								</configuration>
 							</execution>
@@ -129,6 +152,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 									<url>https://aoindustries.com/ao-servlet-util/apidocs/</url>
 									<location>${project.build.directory}/offlineLinks/com.aoindustries/ao-servlet-util</location>
 								</offlineLink>
+								<!-- JSP Only: <groupId>com.aoindustries</groupId><artifactId>ao-taglib</artifactId> -->
 								<offlineLink>
 									<url>https://aoindustries.com/ao-web-resources/registry/apidocs/</url>
 									<location>${project.build.directory}/offlineLinks/com.aoindustries/ao-web-resources-registry</location>
@@ -139,6 +163,8 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 									<url>https://www.joda.org/joda-time/apidocs/</url>
 									<location>${project.build.directory}/offlineLinks/joda-time/joda-time</location>
 								</offlineLink>
+								<!-- JSP Only: <groupId>joda-time</groupId><artifactId>joda-time-jsptags</artifactId> -->
+								<!-- JSP Only: <groupId>javax.servlet</groupId><artifactId>jstl</artifactId> -->
 								<offlineLink>
 									<url>https://semanticcms.com/core/model/apidocs/</url>
 									<location>${project.build.directory}/offlineLinks/com.semanticcms/semanticcms-core-model</location>
@@ -147,6 +173,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 									<url>https://semanticcms.com/core/servlet/apidocs/</url>
 									<location>${project.build.directory}/offlineLinks/com.semanticcms/semanticcms-core-servlet</location>
 								</offlineLink>
+								<!-- JSP Only: <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-taglib</artifactId> -->
 								<!-- Java SE -->
 								<offlineLink>
 									<url>${javadoc.link.javase}</url>
@@ -178,6 +205,9 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 				<groupId>com.aoindustries</groupId><artifactId>ao-servlet-util</artifactId><version>2.1.0${POST-SNAPSHOT}</version>
 			</dependency>
 			<dependency>
+				<groupId>com.aoindustries</groupId><artifactId>ao-taglib</artifactId><version>6.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+			</dependency>
+			<dependency>
 				<groupId>com.aoindustries</groupId><artifactId>ao-web-resources-registry</artifactId><version>0.2.0${POST-SNAPSHOT}</version>
 			</dependency>
 			<!-- javaee-web-api-bom: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId> -->
@@ -186,10 +216,17 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 				<groupId>joda-time</groupId><artifactId>joda-time</artifactId><version>2.10.6</version>
 			</dependency>
 			<dependency>
+				<groupId>joda-time</groupId><artifactId>joda-time-jsptags</artifactId><version>1.1.1</version>
+			</dependency>
+			<!-- javaee-web-api-bom: <groupId>javax.servlet</groupId><artifactId>jstl</artifactId> -->
+			<dependency>
 				<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId><version>1.12.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
 				<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-servlet</artifactId><version>1.15.1${POST-SNAPSHOT}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-taglib</artifactId><version>1.13.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<!-- Transitive -->
 			<dependency>
@@ -217,6 +254,9 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 				<groupId>com.aoindustries</groupId><artifactId>ao-servlet-filter</artifactId><version>2.2.0${POST-SNAPSHOT}</version>
 			</dependency>
 			<dependency>
+				<groupId>com.aoindustries</groupId><artifactId>ao-servlet-last-modified</artifactId><version>1.1.1${POST-SNAPSHOT}</version>
+			</dependency>
+			<dependency>
 				<groupId>com.aoindustries</groupId><artifactId>ao-servlet-subrequest</artifactId><version>1.0.0${POST-SNAPSHOT}</version>
 			</dependency>
 			<dependency>
@@ -238,21 +278,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 				<groupId>org.apache.commons</groupId><artifactId>commons-lang3</artifactId><version>3.11</version>
 			</dependency>
 			<!-- Runtime Direct -->
-			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-taglib</artifactId><version>6.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
-			</dependency>
-			<dependency>
-				<groupId>joda-time</groupId><artifactId>joda-time-jsptags</artifactId><version>1.1.1</version>
-			</dependency>
-			<!-- javaee-web-api-bom: <groupId>javax.servlet</groupId><artifactId>jstl</artifactId> -->
 			<!-- javaee-web-api-bom: <groupId>org.glassfish.web</groupId><artifactId>jstl-impl</artifactId> -->
-			<dependency>
-				<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-taglib</artifactId><version>1.13.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
-			</dependency>
-			<!-- Runtime Transitive -->
-			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-servlet-last-modified</artifactId><version>1.1.1${POST-SNAPSHOT}</version>
-			</dependency>
 			<!-- BOM -->
 			<dependency>
 				<groupId>com.aoindustries</groupId><artifactId>javaee-web-api-bom</artifactId><version>6.0.1${POST-SNAPSHOT}</version>
@@ -274,6 +300,9 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 			<groupId>com.aoindustries</groupId><artifactId>ao-servlet-util</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>com.aoindustries</groupId><artifactId>ao-taglib</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.aoindustries</groupId><artifactId>ao-web-resources-registry</artifactId>
 		</dependency>
 		<dependency>
@@ -286,30 +315,23 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 			<groupId>joda-time</groupId><artifactId>joda-time</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>joda-time</groupId><artifactId>joda-time-jsptags</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId><artifactId>jstl</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-servlet</artifactId>
 		</dependency>
-		<!-- Runtime Direct -->
-		<dependency>
-			<groupId>com.aoindustries</groupId><artifactId>ao-taglib</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>joda-time</groupId><artifactId>joda-time-jsptags</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId><artifactId>jstl</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.web</groupId><artifactId>jstl-impl</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 		<dependency>
 			<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-taglib</artifactId>
+		</dependency>
+		<!-- Runtime Direct -->
+		<dependency>
+			<groupId>org.glassfish.web</groupId><artifactId>jstl-impl</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
