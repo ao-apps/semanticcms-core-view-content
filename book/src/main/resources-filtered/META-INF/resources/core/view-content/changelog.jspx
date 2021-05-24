@@ -36,8 +36,8 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		title="@{documented.name} Changelog"
 		shortTitle="Changelog"
 		tocLevels="1"
-		datePublished="2016-10-30T21:15:31-0500"
-		dateModified="2021-03-18T22:24:14-05:00"
+		datePublished="2016-10-30T21:15:31-05:00"
+		dateModified="2021-05-22T13:07:02-05:00"
 	>
 		<c:if test="${fn:endsWith('@{project.version}', '-SNAPSHOT') and !fn:endsWith('@{project.version}', '-POST-SNAPSHOT')}">
 			<changelog:release
@@ -49,6 +49,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 			>
 				<ul>
 					<li>Updated for <core:link book="/" page="/" /> 2 compatibility.</li>
+					<li>Updated to <ao:a rel="nofollow" href="https://www.oracle.com/java/technologies/javaee/javaeetechnologies.html#javaee7">Java™ EE 7 Web Profile</ao:a> (Servlet 3.1, JSP 2.3, EL 3.0, and JSTL 1.2).</li>
 				</ul>
 			</changelog:release>
 		</c:if>
@@ -89,7 +90,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.7.0"
-			datePublished="2019-10-11T22:51:23-0500"
+			datePublished="2019-10-11T22:51:23-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -102,7 +103,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.6.0"
-			datePublished="2019-06-22T02:11:25-0500"
+			datePublished="2019-06-22T02:11:25-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -124,7 +125,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.5.0"
-			datePublished="2019-04-20T20:35:19-0500"
+			datePublished="2019-04-20T20:35:19-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -142,7 +143,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.4.3"
-			datePublished="2017-07-20T12:00:05-0500"
+			datePublished="2017-07-20T12:00:05-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -155,7 +156,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.4.2"
-			datePublished="2016-11-16T03:47:51-0600"
+			datePublished="2016-11-16T03:47:51-06:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -171,7 +172,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.4.1"
-			datePublished="2016-10-20T18:42:00-0500"
+			datePublished="2016-10-20T18:42:00-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -186,7 +187,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.4.0"
-			datePublished="2016-10-04T21:04:00-0500"
+			datePublished="2016-10-04T21:04:00-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -200,7 +201,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.3"
-			datePublished="2016-09-11T15:48:00-0500"
+			datePublished="2016-09-11T15:48:00-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -214,7 +215,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.2"
-			datePublished="2016-09-03T09:56:00-0500"
+			datePublished="2016-09-03T09:56:00-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -227,7 +228,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.1"
-			datePublished="2016-08-21T17:05:00-0500"
+			datePublished="2016-08-21T17:05:00-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -241,7 +242,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.0"
-			datePublished="2016-08-19T17:06:00-0500"
+			datePublished="2016-08-19T17:06:00-05:00"
 			groupId="@{project.groupId}"
 			artifactId="semanticcms-view-content"
 			scmUrl="@{project.scm.url}"
