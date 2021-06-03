@@ -35,8 +35,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 	<properties>
 		<javadoc.breadcrumbs><![CDATA[<a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a>
 / <a target="${javadoc.target}" href="https://semanticcms.com/core/">Core</a>
-/ <a target="${javadoc.target}" href="${project.url}">${shortTitle}</a>]]></javadoc.breadcrumbs>
-		<shortTitle>View Content</shortTitle>
+/ <a target="${javadoc.target}" href="${project.url}">View Content</a>]]></javadoc.breadcrumbs>
 		<description.html><![CDATA[<a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> view of the content of the current page.]]></description.html>
 	</properties>
 
@@ -87,7 +86,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 				<configuration>
 					<usedDependencies>
 						<!-- JSP Only -->
-						<dependency>com.aoindustries:ao-taglib</dependency>
+						<dependency>com.aoapps:ao-taglib</dependency>
 						<dependency>joda-time:joda-time-jsptags</dependency>
 						<dependency>com.semanticcms:semanticcms-core-taglib</dependency>
 						<dependency>org.apache.taglibs:taglibs-standard-spec</dependency>
@@ -113,25 +112,25 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 									<artifactItems>
 										<!-- Direct -->
 										<artifactItem>
-											<groupId>com.aoindustries</groupId><artifactId>ao-collections</artifactId><classifier>javadoc</classifier>
+											<groupId>com.aoapps</groupId><artifactId>ao-collections</artifactId><classifier>javadoc</classifier>
 											<includes>element-list, package-list</includes>
-											<outputDirectory>${project.build.directory}/offlineLinks/com.aoindustries/ao-collections</outputDirectory>
+											<outputDirectory>${project.build.directory}/offlineLinks/com.aoapps/ao-collections</outputDirectory>
 										</artifactItem>
 										<artifactItem>
-											<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-servlet</artifactId><classifier>javadoc</classifier>
+											<groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId><classifier>javadoc</classifier>
 											<includes>element-list, package-list</includes>
-											<outputDirectory>${project.build.directory}/offlineLinks/com.aoindustries/ao-fluent-html-servlet</outputDirectory>
+											<outputDirectory>${project.build.directory}/offlineLinks/com.aoapps/ao-fluent-html-servlet</outputDirectory>
 										</artifactItem>
 										<artifactItem>
-											<groupId>com.aoindustries</groupId><artifactId>ao-servlet-util</artifactId><classifier>javadoc</classifier>
+											<groupId>com.aoapps</groupId><artifactId>ao-servlet-util</artifactId><classifier>javadoc</classifier>
 											<includes>element-list, package-list</includes>
-											<outputDirectory>${project.build.directory}/offlineLinks/com.aoindustries/ao-servlet-util</outputDirectory>
+											<outputDirectory>${project.build.directory}/offlineLinks/com.aoapps/ao-servlet-util</outputDirectory>
 										</artifactItem>
-										<!-- JSP Only: <groupId>com.aoindustries</groupId><artifactId>ao-taglib</artifactId> -->
+										<!-- JSP Only: <groupId>com.aoapps</groupId><artifactId>ao-taglib</artifactId> -->
 										<artifactItem>
-											<groupId>com.aoindustries</groupId><artifactId>ao-web-resources-registry</artifactId><classifier>javadoc</classifier>
+											<groupId>com.aoapps</groupId><artifactId>ao-web-resources-registry</artifactId><classifier>javadoc</classifier>
 											<includes>element-list, package-list</includes>
-											<outputDirectory>${project.build.directory}/offlineLinks/com.aoindustries/ao-web-resources-registry</outputDirectory>
+											<outputDirectory>${project.build.directory}/offlineLinks/com.aoapps/ao-web-resources-registry</outputDirectory>
 										</artifactItem>
 										<!-- ao-javadoc-offline: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId> -->
 										<!-- ao-javadoc-offline: <groupId>javax.servlet.jsp</groupId><artifactId>javax.servlet.jsp-api</artifactId> -->
@@ -164,21 +163,21 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 							<offlineLinks>
 								<!-- Direct -->
 								<offlineLink>
-									<url>https://aoindustries.com/ao-collections/apidocs/</url>
-									<location>${project.build.directory}/offlineLinks/com.aoindustries/ao-collections</location>
+									<url>https://oss.aoapps.com/collections/apidocs/</url>
+									<location>${project.build.directory}/offlineLinks/com.aoapps/ao-collections</location>
 								</offlineLink>
 								<offlineLink>
-									<url>https://aoindustries.com/ao-fluent-html/servlet/apidocs/</url>
-									<location>${project.build.directory}/offlineLinks/com.aoindustries/ao-fluent-html-servlet</location>
+									<url>https://oss.aoapps.com/fluent-html/servlet/apidocs/</url>
+									<location>${project.build.directory}/offlineLinks/com.aoapps/ao-fluent-html-servlet</location>
 								</offlineLink>
 								<offlineLink>
-									<url>https://aoindustries.com/ao-servlet-util/apidocs/</url>
-									<location>${project.build.directory}/offlineLinks/com.aoindustries/ao-servlet-util</location>
+									<url>https://oss.aoapps.com/servlet-util/apidocs/</url>
+									<location>${project.build.directory}/offlineLinks/com.aoapps/ao-servlet-util</location>
 								</offlineLink>
-								<!-- JSP Only: <groupId>com.aoindustries</groupId><artifactId>ao-taglib</artifactId> -->
+								<!-- JSP Only: <groupId>com.aoapps</groupId><artifactId>ao-taglib</artifactId> -->
 								<offlineLink>
-									<url>https://aoindustries.com/ao-web-resources/registry/apidocs/</url>
-									<location>${project.build.directory}/offlineLinks/com.aoindustries/ao-web-resources-registry</location>
+									<url>https://oss.aoapps.com/web-resources/registry/apidocs/</url>
+									<location>${project.build.directory}/offlineLinks/com.aoapps/ao-web-resources-registry</location>
 								</offlineLink>
 								<!-- Java EE: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId> -->
 								<!-- Java EE: <groupId>javax.servlet.jsp</groupId><artifactId>javax.servlet.jsp-api</artifactId> -->
@@ -200,12 +199,12 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 								<!-- Java SE -->
 								<offlineLink>
 									<url>${javadoc.link.javase}</url>
-									<location>${project.build.directory}/offlineLinks/com/aoindustries/javadoc/offline/javase/${javase.release}</location>
+									<location>${project.build.directory}/offlineLinks/com/aoapps/javadoc/offline/javase/${javase.release}</location>
 								</offlineLink>
 								<!-- Java EE -->
 								<offlineLink>
 									<url>${javadoc.link.javaee}</url>
-									<location>${project.build.directory}/offlineLinks/com/aoindustries/javadoc/offline/javaee/${javaee.version}</location>
+									<location>${project.build.directory}/offlineLinks/com/aoapps/javadoc/offline/javaee/${javaee.version}</location>
 								</offlineLink>
 							</offlineLinks>
 						</configuration>
@@ -219,19 +218,19 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<dependencies>
 			<!-- Direct -->
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-collections</artifactId><version>1.2.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-collections</artifactId><version>1.2.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-servlet</artifactId><version>0.4.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId><version>0.4.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-servlet-util</artifactId><version>3.6.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-servlet-util</artifactId><version>3.6.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-taglib</artifactId><version>6.5.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-taglib</artifactId><version>7.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-web-resources-registry</artifactId><version>0.4.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-web-resources-registry</artifactId><version>0.4.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<!-- javaee-web-api-bom: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId> -->
 			<!-- javaee-web-api-bom: <groupId>javax.servlet.jsp</groupId><artifactId>javax.servlet.jsp-api</artifactId> -->
@@ -253,52 +252,52 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 			<!-- javaee-web-api-bom: <groupId>org.apache.taglibs</groupId><artifactId>taglibs-standard-spec</artifactId> -->
 			<!-- Transitive -->
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-concurrent</artifactId><version>3.1.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-concurrent</artifactId><version>3.1.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-encoding</artifactId><version>4.0.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-encoding</artifactId><version>4.0.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-encoding-servlet</artifactId><version>3.1.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-encoding-servlet</artifactId><version>3.1.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-encoding-taglib</artifactId><version>1.1.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-encoding-taglib</artifactId><version>2.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-any</artifactId><version>0.4.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId><version>0.4.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-io-buffer</artifactId><version>3.3.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-hodgepodge</artifactId><version>4.9.2-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-lang</artifactId><version>4.17.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-io-buffer</artifactId><version>3.3.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-net-types</artifactId><version>1.3.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-lang</artifactId><version>4.17.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-servlet-filter</artifactId><version>2.4.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-net-types</artifactId><version>1.3.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-servlet-last-modified</artifactId><version>1.3.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-servlet-filter</artifactId><version>2.4.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-servlet-subrequest</artifactId><version>1.2.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-servlet-last-modified</artifactId><version>1.3.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-tempfiles</artifactId><version>2.0.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-servlet-subrequest</artifactId><version>1.2.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-tempfiles-servlet</artifactId><version>1.2.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-tempfiles</artifactId><version>2.0.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-tlds</artifactId><version>1.2.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-tempfiles-servlet</artifactId><version>1.2.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-web-resources-servlet</artifactId><version>0.4.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-tlds</artifactId><version>1.2.1-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>aocode-public</artifactId><version>4.9.2-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-web-resources-servlet</artifactId><version>0.4.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId><artifactId>commons-lang3</artifactId><version>3.12.0</version>
@@ -307,7 +306,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 			<!-- javaee-web-api-bom: <groupId>org.apache.taglibs</groupId><artifactId>taglibs-standard-impl</artifactId> -->
 			<!-- BOM -->
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>javaee-web-api-bom</artifactId><version>7.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>javaee-web-api-bom</artifactId><version>7.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -317,19 +316,19 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 	<dependencies>
 		<!-- Direct -->
 		<dependency>
-			<groupId>com.aoindustries</groupId><artifactId>ao-collections</artifactId>
+			<groupId>com.aoapps</groupId><artifactId>ao-collections</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-servlet</artifactId>
+			<groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.aoindustries</groupId><artifactId>ao-servlet-util</artifactId>
+			<groupId>com.aoapps</groupId><artifactId>ao-servlet-util</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.aoindustries</groupId><artifactId>ao-taglib</artifactId>
+			<groupId>com.aoapps</groupId><artifactId>ao-taglib</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.aoindustries</groupId><artifactId>ao-web-resources-registry</artifactId>
+			<groupId>com.aoapps</groupId><artifactId>ao-web-resources-registry</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId>
