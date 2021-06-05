@@ -22,10 +22,10 @@
  */
 package com.semanticcms.core.view.content;
 
-import com.aoindustries.collections.AoArrays;
-import com.aoindustries.html.servlet.FlowContent;
-import com.aoindustries.servlet.http.Dispatcher;
-import com.aoindustries.web.resources.registry.Registry;
+import com.aoapps.collections.AoArrays;
+import com.aoapps.html.servlet.FlowContent;
+import com.aoapps.servlet.http.Dispatcher;
+import com.aoapps.web.resources.registry.Registry;
 import com.semanticcms.core.model.Page;
 import com.semanticcms.core.servlet.PageUtils;
 import com.semanticcms.core.servlet.SemanticCMS;
