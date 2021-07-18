@@ -29,7 +29,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<relativePath>../../../parent/pom.xml</relativePath>
 	</parent>
 
-	<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-view-content-book</artifactId><version>1.9.0-SNAPSHOT</version>
+	<groupId>com.semanticcms</groupId><artifactId>semanticcms-core-view-content-book</artifactId><version>1.9.0</version>
 	<packaging>bundle</packaging>
 
 	<properties>
@@ -74,7 +74,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 		<connection>scm:git:git://github.com/aoindustries/semanticcms-core-view-content.git</connection>
 		<developerConnection>scm:git:git@github.com:aoindustries/semanticcms-core-view-content.git</developerConnection>
 		<url>https://github.com/aoindustries/semanticcms-core-view-content</url>
-		<tag>HEAD</tag>
+		<tag>semanticcms-core-view-content-book-1.9.0</tag>
 	</scm>
 
 	<issueManagement>
