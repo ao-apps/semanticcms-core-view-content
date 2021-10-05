@@ -71,20 +71,20 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 	</developers>
 
 	<scm>
-		<connection>scm:git:git://github.com/aoindustries/semanticcms-core-view-content.git</connection>
-		<developerConnection>scm:git:git@github.com:aoindustries/semanticcms-core-view-content.git</developerConnection>
-		<url>https://github.com/aoindustries/semanticcms-core-view-content</url>
+		<connection>scm:git:git://github.com/ao-apps/semanticcms-core-view-content.git</connection>
+		<developerConnection>scm:git:git@github.com:ao-apps/semanticcms-core-view-content.git</developerConnection>
+		<url>https://github.com/ao-apps/semanticcms-core-view-content</url>
 		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/aoindustries/semanticcms-core-view-content/issues</url>
+		<url>https://github.com/ao-apps/semanticcms-core-view-content/issues</url>
 	</issueManagement>
 
 	<ciManagement>
 		<system>GitHub Actions</system>
-		<url>https://github.com/aoindustries/semanticcms-core-view-content/actions</url>
+		<url>https://github.com/ao-apps/semanticcms-core-view-content/actions</url>
 	</ciManagement>
 
 	<repositories>
