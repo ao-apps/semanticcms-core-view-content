@@ -272,7 +272,7 @@ along with semanticcms-core-view-content.  If not, see <http://www.gnu.org/licen
 				<li>May now exclude robots from specific views.</li>
 				<li>Headings moved to own projects and renamed to "Section".</li>
 				<li>Now passing arguments through includes.</li>
-				<li><![CDATA[Passing args as Map&lt;String,?&gt; instead of forcing Map&lt;String,Object&gt;]]></li>
+				<li>Passing args as <code><![CDATA[Map&lt;String, ?&gt;]]></code> instead of forcing <code><![CDATA[Map&lt;String, Object&gt;]]></code></li>
 				<li>CSS links may now be registered for global use.</li>
 			</ul>
 		</changelog:release>
