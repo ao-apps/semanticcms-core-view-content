@@ -46,7 +46,7 @@ import org.joda.time.ReadableInstant;
 /**
  * The default content view.
  */
-public class ContentView extends View {
+public final class ContentView extends View {
 
 	/**
 	 * @see  SemanticCMS#DEFAULT_VIEW_NAME
@@ -67,7 +67,9 @@ public class ContentView extends View {
 		}
 	}
 
-	private ContentView() {}
+	private ContentView() {
+		// Do nothing
+	}
 
 	@Override
 	public Group getGroup() {
@@ -139,7 +141,7 @@ public class ContentView extends View {
 
 	/**
 	 * Uses the page settings.
-	 * 
+	 *
 	 * @see  PageUtils#findAllowRobots(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, com.semanticcms.core.model.Page)
 	 */
 	@Override
