@@ -51,121 +51,121 @@ import org.joda.time.ReadableInstant;
  */
 public final class ContentView extends View {
 
-	/**
-	 * @see  Link#DEFAULT_VIEW_NAME
-	 */
-	public static final String NAME = Link.DEFAULT_VIEW_NAME;
+  /**
+   * @see  Link#DEFAULT_VIEW_NAME
+   */
+  public static final String NAME = Link.DEFAULT_VIEW_NAME;
 
-	private static final String JSPX_TARGET = "/semanticcms-core-view-content/view.inc.jspx";
+  private static final String JSPX_TARGET = "/semanticcms-core-view-content/view.inc.jspx";
 
-	@WebListener("Registers the \"" + NAME + "\" view in HtmlRenderer.")
-	public static class Initializer implements ServletContextListener {
-		@Override
-		public void contextInitialized(ServletContextEvent event) {
-			HtmlRenderer.getInstance(event.getServletContext()).addView(new ContentView());
-		}
-		@Override
-		public void contextDestroyed(ServletContextEvent event) {
-			// Do nothing
-		}
-	}
+  @WebListener("Registers the \"" + NAME + "\" view in HtmlRenderer.")
+  public static class Initializer implements ServletContextListener {
+    @Override
+    public void contextInitialized(ServletContextEvent event) {
+      HtmlRenderer.getInstance(event.getServletContext()).addView(new ContentView());
+    }
+    @Override
+    public void contextDestroyed(ServletContextEvent event) {
+      // Do nothing
+    }
+  }
 
-	private ContentView() {
-		// Do nothing
-	}
+  private ContentView() {
+    // Do nothing
+  }
 
-	@Override
-	public Group getGroup() {
-		return Group.FIRST;
-	}
+  @Override
+  public Group getGroup() {
+    return Group.FIRST;
+  }
 
-	@Override
-	public String getDisplay() {
-		return "Content";
-	}
+  @Override
+  public String getDisplay() {
+    return "Content";
+  }
 
-	@Override
-	public String getName() {
-		return NAME;
-	}
+  @Override
+  public String getName() {
+    return NAME;
+  }
 
-	@Override
-	public boolean getAppliesGlobally() {
-		return false;
-	}
+  @Override
+  public boolean getAppliesGlobally() {
+    return false;
+  }
 
-	/**
-	 * The last modified time of a page is the most recent of:
-	 * <ol>
-	 *   <li>{@link Page#getDateCreated()}</li>
-	 *   <li>{@link Page#getDatePublished()}</li>
-	 *   <li>{@link Page#getDateModified()}</li>
-	 * </ol>
-	 * Note: {@link Page#getDateReviewed()} is left out because a change in its value alone does not indicate a change in content.
-	 */
-	@Override
-	public ReadableInstant getLastModified(
-		ServletContext servletContext,
-		HttpServletRequest request,
-		HttpServletResponse response,
-		Page page
-	) throws ServletException, IOException {
-		return AoArrays.maxNonNull(
-			page.getDateCreated(),
-			page.getDatePublished(),
-			page.getDateModified()
-		);
-	}
+  /**
+   * The last modified time of a page is the most recent of:
+   * <ol>
+   *   <li>{@link Page#getDateCreated()}</li>
+   *   <li>{@link Page#getDatePublished()}</li>
+   *   <li>{@link Page#getDateModified()}</li>
+   * </ol>
+   * Note: {@link Page#getDateReviewed()} is left out because a change in its value alone does not indicate a change in content.
+   */
+  @Override
+  public ReadableInstant getLastModified(
+    ServletContext servletContext,
+    HttpServletRequest request,
+    HttpServletResponse response,
+    Page page
+  ) throws ServletException, IOException {
+    return AoArrays.maxNonNull(
+      page.getDateCreated(),
+      page.getDatePublished(),
+      page.getDateModified()
+    );
+  }
 
-	@Override
-	public String getTitle(
-		ServletContext servletContext,
-		HttpServletRequest request,
-		HttpServletResponse response,
-		Page page
-	) {
-		String bookTitle = SemanticCMS.getInstance(servletContext).getBook(page.getPageRef().getBookRef()).getTitle();
-		if(bookTitle != null && !bookTitle.isEmpty()) {
-			return page.getTitle() + TITLE_SEPARATOR + bookTitle;
-		} else {
-			return page.getTitle();
-		}
-	}
+  @Override
+  public String getTitle(
+    ServletContext servletContext,
+    HttpServletRequest request,
+    HttpServletResponse response,
+    Page page
+  ) {
+    String bookTitle = SemanticCMS.getInstance(servletContext).getBook(page.getPageRef().getBookRef()).getTitle();
+    if (bookTitle != null && !bookTitle.isEmpty()) {
+      return page.getTitle() + TITLE_SEPARATOR + bookTitle;
+    } else {
+      return page.getTitle();
+    }
+  }
 
-	@Override
-	public String getDescription(Page page) {
-		return page.getDescription();
-	}
+  @Override
+  public String getDescription(Page page) {
+    return page.getDescription();
+  }
 
-	@Override
-	public String getKeywords(Page page) {
-		return page.getKeywords();
-	}
+  @Override
+  public String getKeywords(Page page) {
+    return page.getKeywords();
+  }
 
-	/**
-	 * Uses the page settings.
-	 *
-	 * @see  PageUtils#findAllowRobots(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, com.semanticcms.core.model.Page)
-	 */
-	@Override
-	public boolean getAllowRobots(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException {
-		return PageUtils.findAllowRobots(servletContext, request, response, page);
-	}
+  /**
+   * Uses the page settings.
+   *
+   * @see  PageUtils#findAllowRobots(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, com.semanticcms.core.model.Page)
+   */
+  @Override
+  public boolean getAllowRobots(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException {
+    return PageUtils.findAllowRobots(servletContext, request, response, page);
+  }
 
-	@Override
-	public void configureResources(ServletContext servletContext, HttpServletRequest req, HttpServletResponse resp, Theme theme, Page page, Registry requestRegistry) {
-		super.configureResources(servletContext, req, resp, theme, page, requestRegistry);
-		// TODO: Add and activate the page-scope registry from the page that will be written
-	}
+  @Override
+  public void configureResources(ServletContext servletContext, HttpServletRequest req, HttpServletResponse resp, Theme theme, Page page, Registry requestRegistry) {
+    super.configureResources(servletContext, req, resp, theme, page, requestRegistry);
+    // TODO: Add and activate the page-scope registry from the page that will be written
+  }
 
-	@Override
-	public <__ extends FlowContent<__>> void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, __ flow, Page page) throws ServletException, IOException, SkipPageException {
-		Dispatcher.include(
-			servletContext,
-			JSPX_TARGET,
-			request,
-			response,
-			Collections.singletonMap("page", page)
-		);
-	}
+  @Override
+  public <__ extends FlowContent<__>> void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, __ flow, Page page) throws ServletException, IOException, SkipPageException {
+    Dispatcher.include(
+      servletContext,
+      JSPX_TARGET,
+      request,
+      response,
+      Collections.singletonMap("page", page)
+    );
+  }
 }
