@@ -64,6 +64,7 @@ public final class ContentView extends View {
     public void contextInitialized(ServletContextEvent event) {
       HtmlRenderer.getInstance(event.getServletContext()).addView(new ContentView());
     }
+
     @Override
     public void contextDestroyed(ServletContextEvent event) {
       // Do nothing
@@ -105,24 +106,24 @@ public final class ContentView extends View {
    */
   @Override
   public ReadableInstant getLastModified(
-    ServletContext servletContext,
-    HttpServletRequest request,
-    HttpServletResponse response,
-    Page page
+      ServletContext servletContext,
+      HttpServletRequest request,
+      HttpServletResponse response,
+      Page page
   ) throws ServletException, IOException {
     return AoArrays.maxNonNull(
-      page.getDateCreated(),
-      page.getDatePublished(),
-      page.getDateModified()
+        page.getDateCreated(),
+        page.getDatePublished(),
+        page.getDateModified()
     );
   }
 
   @Override
   public String getTitle(
-    ServletContext servletContext,
-    HttpServletRequest request,
-    HttpServletResponse response,
-    Page page
+      ServletContext servletContext,
+      HttpServletRequest request,
+      HttpServletResponse response,
+      Page page
   ) {
     String bookTitle = SemanticCMS.getInstance(servletContext).getBook(page.getPageRef().getBookRef()).getTitle();
     if (bookTitle != null && !bookTitle.isEmpty()) {
@@ -161,11 +162,11 @@ public final class ContentView extends View {
   @Override
   public <__ extends FlowContent<__>> void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, __ flow, Page page) throws ServletException, IOException, SkipPageException {
     Dispatcher.include(
-      servletContext,
-      JSPX_TARGET,
-      request,
-      response,
-      Collections.singletonMap("page", page)
+        servletContext,
+        JSPX_TARGET,
+        request,
+        response,
+        Collections.singletonMap("page", page)
     );
   }
 }
