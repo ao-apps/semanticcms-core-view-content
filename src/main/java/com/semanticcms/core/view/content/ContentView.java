@@ -50,12 +50,17 @@ import org.joda.time.ReadableInstant;
 public final class ContentView extends View {
 
   /**
+   * The view name is {@link SemanticCMS#DEFAULT_VIEW_NAME}.
+   *
    * @see  SemanticCMS#DEFAULT_VIEW_NAME
    */
   public static final String NAME = SemanticCMS.DEFAULT_VIEW_NAME;
 
   private static final String JSPX_TARGET = "/semanticcms-core-view-content/view.inc.jspx";
 
+  /**
+   * Registers the "{@link #NAME}" view in {@link SemanticCMS}.
+   */
   @WebListener("Registers the \"" + NAME + "\" view in SemanticCMS.")
   public static class Initializer implements ServletContextListener {
     @Override
@@ -158,7 +163,8 @@ public final class ContentView extends View {
   }
 
   @Override
-  public <__ extends FlowContent<__>> void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, __ flow, Page page) throws ServletException, IOException, SkipPageException {
+  public <__ extends FlowContent<__>> void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, __ flow, Page page)
+      throws ServletException, IOException, SkipPageException {
     Dispatcher.include(
         servletContext,
         JSPX_TARGET,
