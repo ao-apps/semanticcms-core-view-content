@@ -36,15 +36,15 @@ along with semanticcms-core-view-content.  If not, see <https://www.gnu.org/lice
     <module.name>com.semanticcms.core.view.content.book</module.name>
     <!-- These values are copied from the project being documented -->
     <documented.artifactId>semanticcms-core-view-content</documented.artifactId>
-    <documented.name>SemanticCMS Core View Content²</documented.name>
+    <documented.name>SemanticCMS Core View Content</documented.name>
     <documented.description>SemanticCMS view of the content of the current page.</documented.description>
 
     <description.html><![CDATA[Documentation for <a target="${javadoc.target}" href="${project.url}">${documented.name}</a> in <a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> format.]]></description.html>
   </properties>
 
-  <name>SemanticCMS Core View Content² Book</name>
+  <name>SemanticCMS Core View Content Book</name>
   <url>https://semanticcms.com/core/view-content/</url>
-  <description>Documentation for SemanticCMS Core View Content² in SemanticCMS format.</description>
+  <description>Documentation for SemanticCMS Core View Content in SemanticCMS format.</description>
   <inceptionYear>2013</inceptionYear>
 
   <licenses>
