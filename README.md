@@ -23,7 +23,7 @@
 * [Project Home](https://semanticcms.com/core/view-content/)
 * [Changelog](https://semanticcms.com/core/view-content/changelog)
 * [API Docs](https://semanticcms.com/core/view-content/apidocs/)
-* [Maven Central Repository](https://central.sonatype.com/search?namespace=com.semanticcms&q=a%3Asemanticcms-core-view-content)
+* [Maven Central Repository](https://central.sonatype.com/artifact/com.semanticcms/semanticcms-core-view-content)
 * [GitHub](https://github.com/ao-apps/semanticcms-core-view-content)
 
 ## Contact Us
