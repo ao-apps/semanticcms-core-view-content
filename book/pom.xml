@@ -41,6 +41,9 @@ along with semanticcms-core-view-content.  If not, see <https://www.gnu.org/lice
     <documented.artifactId>semanticcms-core-view-content</documented.artifactId>
     <documented.name>SemanticCMS Core View Content</documented.name>
     <documented.description>SemanticCMS view of the content of the current page.</documented.description>
+    <javadoc.breadcrumbs><![CDATA[<a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a>
+/ <a target="${javadoc.target}" href="https://semanticcms.com/core/">Core</a>
+/ <a target="${javadoc.target}" href="${project.url}">View Content</a>]]></javadoc.breadcrumbs>
 
     <description.html><![CDATA[Documentation for <a target="${javadoc.target}" href="${project.url}">${documented.name}</a> in <a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> format.]]></description.html>
     <!-- SonarQube -->
