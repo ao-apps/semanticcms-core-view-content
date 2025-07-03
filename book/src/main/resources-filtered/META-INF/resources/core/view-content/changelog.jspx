@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 semanticcms-core-view-content - SemanticCMS view of the content of the current page.
-Copyright (C) 2016, 2017, 2019, 2020, 2021, 2022, 2023  AO Industries, Inc.
+Copyright (C) 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2025  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -37,7 +37,7 @@ along with semanticcms-core-view-content.  If not, see <https://www.gnu.org/lice
     shortTitle="Changelog"
     tocLevels="1"
     datePublished="2016-10-30T21:15:31-05:00"
-    dateModified="2021-07-18T02:45:32-05:00"
+    dateModified="2025-07-02T23:05:45Z"
   >
     <c:set var="latestRelease" value="1.9.0" />
     <c:if test="${
@@ -50,7 +50,6 @@ along with semanticcms-core-view-content.  If not, see <https://www.gnu.org/lice
         version="@{project.version}"
         groupId="@{project.groupId}"
         artifactId="@{documented.artifactId}"
-        repository="@{nexusUrl}content/repositories/snapshots/"
         scmUrl="@{project.scm.url}"
       >
         <ul>
