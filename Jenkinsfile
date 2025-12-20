@@ -29,9 +29,9 @@ def upstreamProjects = [
 
   // Direct
   '../../oss/collections', // <groupId>com.aoapps</groupId><artifactId>ao-collections</artifactId>
-  '../../oss/fluent-html-servlet-javaee', // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId>
-  '../../oss/servlet-util-javaee', // <groupId>com.aoapps</groupId><artifactId>ao-servlet-util</artifactId>
-  '../../oss/taglib-javaee', // <groupId>com.aoapps</groupId><artifactId>ao-taglib</artifactId>
+  '../../oss/fluent-html-servlet', // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId>
+  '../../oss/servlet-util', // <groupId>com.aoapps</groupId><artifactId>ao-servlet-util</artifactId>
+  '../../oss/taglib', // <groupId>com.aoapps</groupId><artifactId>ao-taglib</artifactId>
   '../../oss/web-resources/registry', // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-registry</artifactId>
   // No Jenkins: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId>
   // No Jenkins: <groupId>javax.servlet.jsp</groupId><artifactId>javax.servlet.jsp-api</artifactId>
