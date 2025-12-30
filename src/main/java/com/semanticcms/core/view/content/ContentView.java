@@ -1,6 +1,6 @@
 /*
  * semanticcms-core-view-content - SemanticCMS view of the content of the current page.
- * Copyright (C) 2016, 2017, 2020, 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2020, 2021, 2022, 2025  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -35,6 +35,7 @@ import com.semanticcms.core.renderer.html.HtmlRenderer;
 import com.semanticcms.core.renderer.html.Theme;
 import com.semanticcms.core.renderer.html.View;
 import java.io.IOException;
+import java.time.ZonedDateTime;
 import java.util.Collections;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -44,7 +45,6 @@ import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.SkipPageException;
-import org.joda.time.ReadableInstant;
 
 /**
  * The default content view.
@@ -110,7 +110,7 @@ public final class ContentView extends View {
    * Note: {@link Page#getDateReviewed()} is left out because a change in its value alone does not indicate a change in content.
    */
   @Override
-  public ReadableInstant getLastModified(
+  public ZonedDateTime getLastModified(
       ServletContext servletContext,
       HttpServletRequest request,
       HttpServletResponse response,

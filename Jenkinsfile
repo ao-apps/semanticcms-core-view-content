@@ -35,7 +35,6 @@ def upstreamProjects = [
   '../../oss/web-resources/registry', // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-registry</artifactId>
   // No Jenkins: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId>
   // No Jenkins: <groupId>javax.servlet.jsp</groupId><artifactId>javax.servlet.jsp-api</artifactId>
-  // No Jenkins: <groupId>joda-time</groupId><artifactId>joda-time</artifactId>
   // No Jenkins: <groupId>joda-time</groupId><artifactId>joda-time-jsptags</artifactId>
   'controller', // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-controller</artifactId>
   'model', // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId>
