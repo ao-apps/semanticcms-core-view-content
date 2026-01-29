@@ -61,7 +61,7 @@ public final class ContentView extends View {
   private static final String JSPX_TARGET = "/semanticcms-core-view-content/view.inc.jspx";
 
   /**
-   * Registers the "{@link #NAME}" view in {@link HtmlRenderer}.
+   * Registers the "{@link ContentView#NAME}" view in {@link HtmlRenderer}.
    */
   @WebListener("Registers the \"" + NAME + "\" view in HtmlRenderer.")
   public static class Initializer implements ServletContextListener {
