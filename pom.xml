@@ -298,7 +298,7 @@ along with semanticcms-core-view-content.  If not, see <https://www.gnu.org/lice
         <groupId>net.sargue</groupId><artifactId>java-time-jsptags</artifactId><version>2.0.2</version>
       </dependency>
       <dependency>
-        <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId><version>2.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+        <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId><version>2.0.0${POST-SNAPSHOT}</version>
       </dependency>
       <dependency>
         <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-servlet</artifactId><version>2.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
