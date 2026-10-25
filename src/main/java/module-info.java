@@ -21,7 +21,6 @@
  * along with semanticcms-core-view-content.  If not, see <https://www.gnu.org/licenses/>.
  */
 module com.semanticcms.core.view.content {
-  exports com.semanticcms.core.view.content;
   // Direct
   requires com.aoapps.collections; // <groupId>com.aoapps</groupId><artifactId>ao-collections</artifactId>
   requires com.aoapps.html.servlet; // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId>
@@ -35,4 +34,6 @@ module com.semanticcms.core.view.content {
   requires com.semanticcms.core.model; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-model</artifactId>
   requires com.semanticcms.core.servlet; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-servlet</artifactId>
   requires com.semanticcms.core.taglib; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-taglib</artifactId>
+
+  exports com.semanticcms.core.view.content;
 }
